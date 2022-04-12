@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>IAS Emulator {% if page_name %}| {{ page_name }} {% endif %}</title>
+    <meta name="keywords" content="{{ seo_keywords }}">
+    <meta name="description" content="{{ seo_description }}">
+    <meta name="og:title" content="My site {{ page_name }}">
+    <meta name="og:description" content="{{ seo_description }}">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="{{ page_name }}">
+    {% include "partials/header.njk" %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% include "partials/footer.njk" %}
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>
